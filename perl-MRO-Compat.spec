@@ -4,7 +4,7 @@
 #
 Name     : perl-MRO-Compat
 Version  : 0.12
-Release  : 5
+Release  : 6
 URL      : http://search.cpan.org/CPAN/authors/id/B/BO/BOBTFISH/MRO-Compat-0.12.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/B/BO/BOBTFISH/MRO-Compat-0.12.tar.gz
 Summary  : 'mro::* interface compatibility for Perls < 5.9.5'
