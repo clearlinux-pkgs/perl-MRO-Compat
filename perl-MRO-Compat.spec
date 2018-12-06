@@ -4,7 +4,7 @@
 #
 Name     : perl-MRO-Compat
 Version  : 0.13
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.13.tar.gz
 Summary  : 'mro::* interface compatibility for Perls < 5.9.5'
