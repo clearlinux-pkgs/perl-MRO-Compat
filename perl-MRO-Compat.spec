@@ -4,10 +4,10 @@
 #
 Name     : perl-MRO-Compat
 Version  : 0.13
-Release  : 16
+Release  : 17
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.13.tar.gz
-Summary  : 'mro::* interface compatibility for Perls < 5.9.5'
+Summary  : mro::* interface compatibility for Perls < 5.9.5
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -25,6 +25,7 @@ package Z;        use base qw/PPP/;
 Summary: dev components for the perl-MRO-Compat package.
 Group: Development
 Provides: perl-MRO-Compat-devel = %{version}-%{release}
+Requires: perl-MRO-Compat = %{version}-%{release}
 
 %description dev
 dev components for the perl-MRO-Compat package.
