@@ -4,12 +4,13 @@
 #
 Name     : perl-MRO-Compat
 Version  : 0.15
-Release  : 23
+Release  : 24
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.15.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.15.tar.gz
 Summary  : 'mro::* interface compatibility for Perls < 5.9.5'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0-Perl GPL-1.0
+Requires: perl-MRO-Compat-license = %{version}-%{release}
 Requires: perl-MRO-Compat-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
@@ -30,6 +31,14 @@ Requires: perl-MRO-Compat = %{version}-%{release}
 
 %description dev
 dev components for the perl-MRO-Compat package.
+
+
+%package license
+Summary: license components for the perl-MRO-Compat package.
+Group: Default
+
+%description license
+license components for the perl-MRO-Compat package.
 
 
 %package perl
@@ -67,6 +76,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-MRO-Compat
+cp %{_builddir}/MRO-Compat-0.15/LICENSE %{buildroot}/usr/share/package-licenses/perl-MRO-Compat/518f25cc48695460cd0f25f83e748663e6f77016
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -84,6 +95,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/share/man/man3/MRO::Compat.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-MRO-Compat/518f25cc48695460cd0f25f83e748663e6f77016
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/MRO/Compat.pm
+/usr/lib/perl5/*
