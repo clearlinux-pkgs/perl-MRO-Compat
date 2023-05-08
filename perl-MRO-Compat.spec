@@ -4,7 +4,7 @@
 #
 Name     : perl-MRO-Compat
 Version  : 0.15
-Release  : 25
+Release  : 26
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.15.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/MRO-Compat-0.15.tar.gz
 Summary  : 'mro::* interface compatibility for Perls < 5.9.5'
